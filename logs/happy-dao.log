@@ -1,0 +1,6 @@
+2016-08-25 18:25:32,863 [main] DEBUG [org.mybatis.generator.internal.db.DatabaseIntrospector] - Retrieving column information for table "data_dict"
+2016-08-25 18:25:32,874 [main] DEBUG [org.mybatis.generator.internal.db.DatabaseIntrospector] - Found column "id", data type 4, in table "happy..data_dict"
+2016-08-25 18:25:32,874 [main] DEBUG [org.mybatis.generator.internal.db.DatabaseIntrospector] - Found column "dict_key", data type 1, in table "happy..data_dict"
+2016-08-25 18:25:32,874 [main] DEBUG [org.mybatis.generator.internal.db.DatabaseIntrospector] - Found column "dict_text", data type 12, in table "happy..data_dict"
+2016-08-25 18:25:32,874 [main] DEBUG [org.mybatis.generator.internal.db.DatabaseIntrospector] - Found column "create_time", data type 93, in table "happy..data_dict"
+2016-08-25 18:25:32,875 [main] DEBUG [org.mybatis.generator.internal.db.DatabaseIntrospector] - Found column "is_deleted", data type 5, in table "happy..data_dict"
