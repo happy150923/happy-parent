@@ -455,6 +455,10 @@ public class RedissonClientWrapper implements RedisClient {
         return 0;
     }
     
+    public void shutdown(){
+        redissonClient.shutdown();
+    }
+    
     public RedissonClient getRedissonClient(){
         return redissonClient;
     }

@@ -10,23 +10,21 @@ import org.redisson.api.RedissonClient;
  * @version 2017-01-13 18:53
  */
 public class RedissonClientHolder {
+    public static RedissonClient getRedisson(){
+        return InnerHolder.redissonClient;
+    }
     
-    private static RedissonClient redissonClient;
-    static{
-        boolean useCluster = Constants.REDIS_USE_CLUSTER;
-        if (useCluster) {
-            redissonClient = RedissonClientGenerator.createRedissonClientFromJSON(Constants.REDISSON_CLUSTER_JSON_FILE);
-        } else {
-            redissonClient = RedissonClientGenerator.createRedissonClientFromJSON(Constants.REDISSON_SINGLE_JSON_FILE);
+    private static class InnerHolder{
+        private static RedissonClient redissonClient = init();
+        private static RedissonClient init(){
+            boolean useCluster = Constants.REDIS_USE_CLUSTER;
+            RedissonClient redissonClient;
+            if (useCluster) {
+                redissonClient = RedissonClientGenerator.createRedissonClientFromJSON(Constants.REDISSON_CLUSTER_JSON_FILE);
+            } else {
+                redissonClient = RedissonClientGenerator.createRedissonClientFromJSON(Constants.REDISSON_SINGLE_JSON_FILE);
+            }
+            return redissonClient;
         }
     }
-    
-    public static RedissonClient getRedisson(){
-        return redissonClient;
-    }
-    
-    public static void destroyRedisson(){
-        redissonClient.shutdown();
-    }
-    
 }
