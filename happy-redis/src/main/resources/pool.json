@@ -1,0 +1,7 @@
+{
+  "maxIdle": 20,
+  "maxTotal": 200,
+  "maxWaitMillis": 1000,
+  "blockWhenExhausted": true,
+  "timeBetweenEvictionRunsMillis": 30000
+}

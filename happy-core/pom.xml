@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>happy-parent</artifactId>
+        <groupId>com.happy</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>happy-core</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.happy</groupId>
+            <artifactId>happy-log</artifactId>
+            <version>${happy.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.happy</groupId>
+            <artifactId>happy-utility</artifactId>
+            <version>${happy.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+    
+    <profiles>
+        <profile>
+            <id>develop</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <!--<database.connection.driver>com.mysql.jdbc.Driver</database.connection.driver>-->
+                <!--<database.connection.url>jdbc:mysql://localhost:3306/happy</database.connection.url>-->
+                <!--<database.connection.username>root</database.connection.username>-->
+                <!--<database.connection.password>root</database.connection.password>-->
+                <redis.prop.file>redis.properties</redis.prop.file>
+                <redis.redisson.cluster.file>redisson-cluster.json</redis.redisson.cluster.file>
+                <redis.redisson.single.file>redisson-single.json</redis.redisson.single.file>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
