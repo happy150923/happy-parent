@@ -11,5 +11,5 @@ public class Constants {
     public static final String SYS_REDIS_PROP_FILE_KEY = "redis.prop.file";
     public static final String SYS_REDIS_REDISSON_CLUSTER_FILE_KEY = "redis.redisson.cluster.file";
     public static final String SYS_REDIS_REDISSON_SINGLE_FILE_KEY = "redis.redisson.single.file";
-    
+    public static final String SYS_ZOOKEEPER_CONFIG_FILE_KEY = "zookeeper.cfg.file";
 }

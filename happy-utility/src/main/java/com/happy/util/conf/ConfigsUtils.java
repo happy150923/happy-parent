@@ -80,7 +80,7 @@ public class ConfigsUtils {
     }
     
     private ConfigsUtils() {
-//        fileList.add("base.properties");
+        fileList.add("system.cfg");
     }
 
     public String toString(){

@@ -9,22 +9,35 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>happy-kafka</artifactId>
-
+    <artifactId>happy-zkeeper</artifactId>
+        
     <dependencies>
         <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.11</artifactId>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.happy</groupId>
+            <artifactId>happy-core</artifactId>
+            <version>${happy.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.happy</groupId>
             <artifactId>happy-log</artifactId>
             <version>${happy.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.happy</groupId>
             <artifactId>happy-utility</artifactId>
             <version>${happy.version}</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
+
 </project>
